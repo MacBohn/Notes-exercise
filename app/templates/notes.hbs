@@ -1,0 +1,29 @@
+{{outlet}}
+
+<h1>Add a Note !!</h1>
+<div class="title">
+  {{textarea placeholder="Add a Title!" value=titleCopy }}
+</div>
+
+<div class="note">
+  {{textarea placeholder="Add a note!" value=noteCopy rows="9" cols="40" }}
+</div>
+
+
+
+<div class="center">
+  <h1>{{titleCopy}}</h1>
+  <p>{{noteCopy}}</p>
+</div>
+
+<br>
+<button {{action 'newNote'}}>Save Note</button>
+  <h1>Notes!!</h1>
+  {{#each note in model}}
+    <br>
+    <div class="posts">
+      <button {{action 'deleteNote' note.id}}>Delete</button>
+      <h2>{{note.title}}</h2>
+      <p>{{note.body}}</p>
+  {{/each}}
+    </div>

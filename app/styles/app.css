@@ -1,3 +1,60 @@
+*, :after, :before {
+box-sizing: border-box;
+}
+
 html, body {
   margin: 20px;
+}
+
+
+textarea:focus{
+  border: 3px solid red;
+  outline: 0;
+
+}
+button:focus{
+  border: 3px solid blue;
+  outline: 0;
+}
+button{
+  margin-left: 620px;
+  font-size: 20px;
+  background: black;
+  color: white;
+  border-radius: 20px;
+}
+
+textarea{
+  padding:10px;
+  width: 40%;
+}
+.note{
+  text-align: center;
+  float: center;
+}
+.title{
+  text-align: center;
+  float: center;
+}
+
+.center{
+  padding:10px;
+  border: 2px solid red;
+  width: 50%;
+  height: 139px;
+  text-align: center;
+  margin-left: 335px;
+  background: black;
+  color: white;
+}
+.posts{
+  text-align: center;
+  padding:10px;
+  border: 2px solid black;
+  margin-left: 300px;
+  margin-right: 300px;
+  border-radius: 10px;
+}
+h1{
+  text-align: center;
 }
