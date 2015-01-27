@@ -8,7 +8,7 @@ html, body {
 
 
 textarea:focus{
-  border: 3px solid red;
+  border: 3px solid green;
   outline: 0;
 
 }
@@ -17,16 +17,22 @@ button:focus{
   outline: 0;
 }
 button{
-  margin-left: 620px;
+  margin-top: 60px;
   font-size: 20px;
-  background: black;
-  color: white;
+  background: blue;
+  color: green;
   border-radius: 20px;
+  margin-top: 18px;
 }
-
+section{
+  text-align: center;
+}
 textarea{
   padding:10px;
   width: 40%;
+  border: 2px solid blue;
+  color: blue;
+  font-size: 20px;
 }
 .note{
   text-align: center;
@@ -37,16 +43,38 @@ textarea{
   float: center;
 }
 
+body{
+  background: grey;
+}
 .center{
   padding:10px;
-  border: 2px solid red;
-  width: 50%;
-  height: 139px;
+  border: 5px solid green;
+  width: 540px;
+  height: 150px;
   text-align: center;
-  margin-left: 335px;
-  background: black;
-  color: white;
+  margin-left: 410px;
+  background: blue;
+  color: green;
+  border-radius: 10px;
 }
+
+.module {
+  width: 200px;
+  height: 200px;
+  background: blue;
+  position: relative;
+  margin: 20px;
+  box-shadow:
+    0 0 0 10px hsl(0, 0%, 50%),
+    0 0 0 15px hsl(0, 0%, 60%),
+    0 0 0 20px hsl(0, 0%, 70%),
+    0 0 0 25px hsl(0, 0%, 80%),
+    0 0 0 30px hsl(0, 0%, 90%);
+    margin-left: 425px;
+    text-align: center;
+    width: 500px;
+}
+
 .posts{
   text-align: center;
   padding:10px;
@@ -54,7 +82,73 @@ textarea{
   margin-left: 300px;
   margin-right: 300px;
   border-radius: 10px;
+  background: white;
 }
 h1{
   text-align: center;
+}
+.ribbon {
+ font-size: 20px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+ width: 50%;
+
+ position: relative;
+ background: green;
+ color: #fff;
+ text-align: center;
+ padding: 1em 2em; /* Adjust to suit */
+ margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid blue;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: white transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+.message{
+  text-align: center;
+  font-size: 30px;
+  background-image: -ms-linear-gradient(top, rgba(0,133,13,1) 0%, rgba(228,228,228,1) 50%, rgba(37,30,247,1) 100%);
+
+background-image: -moz-linear-gradient(top, rgba(0,133,13,1) 0%, rgba(228,228,228,1) 50%, rgba(37,30,247,1) 100%);
+
+background-image: -o-linear-gradient(top, rgba(0,133,13,1) 0%, rgba(228,228,228,1) 50%, rgba(37,30,247,1) 100%);
+
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0,133,13,1)), color-stop(50, rgba(228,228,228,1)), color-stop(100, rgba(37,30,247,1)));
+
+background-image: -webkit-linear-gradient(top, rgba(0,133,13,1) 0%, rgba(228,228,228,1) 50%, rgba(37,30,247,1) 100%);
+
+background-image: linear-gradient(to bottom, rgba(0,133,13,1) 0%, rgba(228,228,228,1) 50%, rgba(37,30,247,1) 100%);
+margin-left: 200px;
+margin-right: 200px;
+border-radius: 20px;
 }

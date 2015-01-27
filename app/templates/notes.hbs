@@ -1,6 +1,9 @@
 {{outlet}}
 
-<h1>Add a Note !!</h1>
+<h1 class="ribbon">
+  <strong class="ribbon-content">ADD SOME NOTES !!</strong>
+</h1>
+
 <div class="title">
   {{textarea placeholder="Add a Title!" value=titleCopy }}
 </div>
@@ -9,21 +12,25 @@
   {{textarea placeholder="Add a note!" value=noteCopy rows="9" cols="40" }}
 </div>
 
-
+<div class= "message">
+  {{message-queue}}
+</div>
 
 <div class="center">
   <h1>{{titleCopy}}</h1>
   <p>{{noteCopy}}</p>
 </div>
 
-<br>
-<button {{action 'newNote'}}>Save Note</button>
-  <h1>Notes!!</h1>
-  {{#each note in model}}
-    <br>
-    <div class="posts">
-      <button {{action 'deleteNote' note.id}}>Delete</button>
-      <h2>{{note.title}}</h2>
-      <p>{{note.body}}</p>
+<section><button {{action 'newNote'}}>Save Note</button></section>
+
+<br><br>
+<h1 class="ribbon">
+  <strong class="ribbon-content"> NOTES YOU ADDED !!</strong>
+</h1>{{#each note in model}}
+<br><br>
+<div class="module">
+  <h2>{{note.title}}</h2>
+  <p>{{note.body}}</p>
+  <button {{action 'deleteNote' note.id}}>Delete</button>
   {{/each}}
-    </div>
+</div>
