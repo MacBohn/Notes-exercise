@@ -20,7 +20,6 @@ export default Ember.ArrayController.extend({
       });
     },
     delete: function() {
-
       this.get('content').delete().then(function() {
         this.formDeleted();
       });

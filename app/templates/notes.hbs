@@ -21,7 +21,7 @@
   <p>{{noteCopy}}</p>
 </div>
 
-<section><button {{action 'newNote'}}>Save Note</button></section>
+      <section><button {{action 'newNote'}}>Save Note</button></section>
 
 <br><br>
 <h1 class="ribbon">
@@ -29,8 +29,8 @@
 </h1>{{#each note in model}}
 <br><br>
 <div class="module">
+    <article><button class="delete" {{action 'deleteNote' note.id}}>Delete ?</button></article>
   <h2>{{note.title}}</h2>
   <p>{{note.body}}</p>
-  <button {{action 'deleteNote' note.id}}>Delete</button>
   {{/each}}
 </div>

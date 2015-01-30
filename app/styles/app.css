@@ -5,7 +5,13 @@ box-sizing: border-box;
 html, body {
   margin: 20px;
 }
-
+article{
+  border-bottom: 3px solid white;
+  color: white;
+}
+.delete{
+  margin-left: 40px;
+}
 
 textarea:focus{
   border: 3px solid green;
@@ -20,7 +26,7 @@ button{
   margin-top: 60px;
   font-size: 20px;
   background: blue;
-  color: green;
+  color: white;
   border-radius: 20px;
   margin-top: 18px;
 }
@@ -38,6 +44,9 @@ textarea{
   text-align: center;
   float: center;
 }
+.module button{
+  margin-left: 0px;
+}
 .title{
   text-align: center;
   float: center;
@@ -54,7 +63,7 @@ body{
   text-align: center;
   margin-left: 410px;
   background: blue;
-  color: green;
+  color: white;
   border-radius: 10px;
 }
 
@@ -83,6 +92,7 @@ body{
   margin-right: 300px;
   border-radius: 10px;
   background: white;
+  height: 100%;
 }
 h1{
   text-align: center;
